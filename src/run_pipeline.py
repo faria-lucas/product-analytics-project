@@ -2,7 +2,7 @@ import duckdb
 from pathlib import Path
 
 
-DB_PATH = "analytics.duckdb"
+DB_PATH = "./analytics.duckdb"
 SQL_MODELS = [
     "models/events.sql",
     "models/sessions.sql",
@@ -10,7 +10,7 @@ SQL_MODELS = [
 ]
 
 
-def run():
+def run_pipeline():
     con = duckdb.connect(DB_PATH)
 
     for sql_file in SQL_MODELS:
@@ -22,4 +22,4 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    run_pipeline()
