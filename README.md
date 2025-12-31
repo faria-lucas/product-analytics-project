@@ -25,7 +25,7 @@ This project implements a lightweight end-to-end product analytics pipeline, fro
 
 ### How to run
 ```bash
-uv run python -m ingest_pipeline/ingest_events.py
-uv run python -m src/run_pipeline.py
+uv run python -m ingest_pipeline.ingest_events
+uv run python -m src.run_pipeline
 streamlit dashboard/run app.py
 ```
